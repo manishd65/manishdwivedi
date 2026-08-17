@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+
+# Common temp/build folders (in case you add tools later)
+node_modules/
+.cache/
