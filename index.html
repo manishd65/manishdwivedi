@@ -142,20 +142,20 @@
   }
 
   /* PHOTOGRAPHY */
-  .photo-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:6px; }
-  @media (max-width:560px){ .photo-grid{ grid-template-columns:1fr 1fr; } }
+  .photo-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:10px; margin-top:6px; }
   .photo-frame{
-    aspect-ratio:4/5;
     border-radius:6px;
     border:1px solid var(--line);
-    position:relative;
     overflow:hidden;
-    background:linear-gradient(160deg, #eeeeec 0%, #f7f6f3 100%);
+    background:#f7f6f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
-  .photo-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+  .photo-frame img{ width:100%; height:auto; display:block; }
   .photo-frame .placeholder-label{
-    position:absolute; bottom:8px; left:8px;
-    font-size:0.68rem; color:#a3a3a0;
+    font-size:0.7rem; color:#a3a3a0;
+    padding:14px;
   }
   .photo-note{ margin-top:12px; font-size:0.85rem; color:var(--text-dim); }
 
@@ -305,25 +305,23 @@
     <h2>Photography</h2>
     <p style="color:var(--text-dim); font-size:0.9rem;">Some mobile photography.</p>
     <div class="photo-grid">
-      <div class="photo-frame"><span class="placeholder-label">photo1.jpg</span><img src="photo1.jpg" alt="Night photography 1" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo2.jpg</span><img src="photo2.jpg" alt="Night photography 2" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo3.jpg</span><img src="photo3.jpg" alt="Night photography 3" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo4.jpg</span><img src="photo4.jpg" alt="Night photography 4" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo5.jpg</span><img src="photo5.jpg" alt="Night photography 5" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo6.jpg</span><img src="photo6.jpg" alt="Night photography 6" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo7.jpg</span><img src="Photo7.jpg" alt="Night photography 7" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo8.jpg</span><img src="photo8.jpg" alt="Night photography 8" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo9.jpg</span><img src="photo9.jpg" alt="Night photography 7" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo10.jpg</span><img src="photo10.jpeg" alt="Night photography 8" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo11.jpg</span><img src="photo11.jpeg" alt="Night photography 7" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo12.jpg</span><img src="photo12.jpg" alt="Night photography 8" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo13.jpg</span><img src="photo13.jpg" alt="Night photography 7" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo14.jpg</span><img src="photo14.jpg" alt="Night photography 8" onerror="this.style.display='none'"></div>
-      <div class="photo-frame"><span class="placeholder-label">photo15.jpg</span><img src="photo15.jpg" alt="Night photography 8" onerror="this.style.display='none'"></div>
-      
-  
-  
-  
+      <div class="photo-frame"><img src="photo1.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo1.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo2.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo2.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo3.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo3.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo4.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo4.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo5.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo5.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo6.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo6.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo7.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo7.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo8.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo8.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo9.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo9.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo10.jpeg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo10.jpeg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo11.jpeg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo11.jpeg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo12.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo12.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo13.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo13.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo14.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo14.jpg&lt;/span&gt;'"></div>
+      <div class="photo-frame"><img src="photo15.jpg" alt="Mobile photography" onerror="this.outerHTML='&lt;span class=&quot;placeholder-label&quot;&gt;photo15.jpg&lt;/span&gt;'"></div>
+    </div>
+    <p class="photo-note">Photos shown at their natural size — files photo1.jpg through photo15.jpg (photo10 and photo11 as .jpeg) in the repo root.</p>
   </section>
 
   <footer class="bottom">
