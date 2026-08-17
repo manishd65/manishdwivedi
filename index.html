@@ -22,7 +22,15 @@
   }
   .wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
 
-  header.top{ padding:56px 0 24px; border-bottom:1px solid var(--line); }
+  header.top{ padding:56px 0 24px; border-bottom:1px solid var(--line); display:flex; gap:24px; align-items:flex-start; }
+  header.top .profile-pic{
+    width:100px; height:100px;
+    border-radius:4px;
+    object-fit:cover;
+    border:1px solid var(--line);
+    flex-shrink:0;
+  }
+  header.top .text-block{ flex:1; }
   header.top h1{ font-size:2rem; font-weight:normal; margin-bottom:6px; }
   header.top .affil{ color:var(--text-dim); font-size:0.98rem; }
   header.top .contact{ margin-top:14px; font-size:0.92rem; }
@@ -82,12 +90,14 @@
 
 <div class="wrap">
   <header class="top">
-    <h1>Manish Dwivedi</h1>
-    <p class="affil">PhD Candidate, Department of Mechanical Engineering<br>Indian Institute of Science, Bengaluru</p>
-    <p class="contact">
-      <a href="mailto:manishsatya65@gmail.com">manishsatya65@gmail.com</a>
-      <a href="https://linkedin.com/in/manish-dwivedi-a60377151" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
+    <img class="profile-pic" src="images/profile.jpg" alt="Manish Dwivedi" onerror="this.style.display='none'">
+    <div class="text-block">
+      <h1>Manish Dwivedi</h1>
+      <p class="affil">PhD Candidate, Department of Mechanical Engineering<br>Indian Institute of Science, Bengaluru</p>
+      <p class="contact">
+        <a href="https://linkedin.com/in/manish-dwivedi-a60377151" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
   </header>
 
   <nav class="sections">
@@ -210,7 +220,7 @@
   </section>
 
   <footer class="bottom">
-    &copy; 2026 Manish Dwivedi. Vibro-acoustic (FRITA) Laboratory, Indian Institute of Science, Bengaluru.
+    &copy; 2026 Manish Dwivedi. Vibro-acoustics (FRITA) Laboratory, Indian Institute of Science, Bengaluru.
   </footer>
 </div>
 
